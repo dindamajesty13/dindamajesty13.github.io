@@ -31,6 +31,7 @@
           });
         scanner.addListener('scan', function(content){
           console.log(content);
+          document.getElementById('hasil').innerHTML=content;
         });
         Instascan.Camera.getCameras().then(function(cameras){
           if (cameras.length > 0) {
@@ -40,6 +41,7 @@
           }
         }).catch(function(e){
           console.error(e);
+        });
       }
 
       function onSuccess(googleUser) {
