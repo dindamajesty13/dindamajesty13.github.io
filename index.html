@@ -33,6 +33,7 @@
           });
         scanner.addListener('scan', function(content){
           console.log(content);
+          PlaySound();
         });
         Instascan.Camera.getCameras().then(function(cameras){
           if (cameras.length > 0) {
